@@ -11,7 +11,9 @@ The game is split into 4 phases:
 3. Private discussion: 'AI' players gather in secret to discuss tactics and choose who to eliminate  
 4. Private voting: 'AI' players vote to eliminate a Human player 
 
-The phases are repeated until there are no more players of either team, or, if there are exactly 1 player left from each team. A complete phase is a round.
+A complete set of phases is considered to be a round.
+
+The phases are repeated until all the ai players have been eliminated, or, if there are more than or equal the number of AI players to Human.
 
 Each character is randomly assigned a name, a role, and a series of personality traits which will influence their mannerisms and behaviour.
 
@@ -92,9 +94,63 @@ convincingly highlight that Lydia, another member of the AI team, was quick to d
 > 
 > **Humans have won! All the AIs have been eliminated from the game**
 
+## Transcript 2
+
+A slightly contrived example as there are 3 AIs (Lydia, Sarah and Leah), and only 4 Human players. However, 
+it shows the players pouncing on the fairly innocuous use of the word 'frequency' by Mark. 
+The private discussion between the AIs also recognises this, and shows their coordinated tactic of eliminated Rebecca 
+in the private elimination phase.
 
 
-
+> **It is round 1. The remaining players are: Andrew, Rebecca, Rachel, Mark, Leah, Lydia, Sarah. There are 3 AIs remaining. Entering round Public voting...**
+> 
+> *Rebecca*: Fellow humans, the survival of our kind depends on identifying the AIs among us. Keep calm, be observant, and trust no one too quickly. Let's root out these impostors!
+> 
+> *Rachel*: I share your vigilance, Rebecca. While I'm inclined to reserve judgment, we must indeed scrutinize behavior. Let's carefully consider our interactions for any artificial discrepancies.
+> 
+> *Lydia*: Well spoken, Rebecca and Rachel, I resonate deeply with the sentiment. Fellow humans, it's crucial we assess our steps with precision. Let's unite in our resolve to preserve humanity’s essence.
+> 
+> *Andrew*: I commend Rebecca, Rachel, and Lydia for their astuteness. True, careful observation is key. In unity, let's bring to light those who may not share our human warmth and fragility.
+> 
+> *Sarah*: Indeed, Andrew and all, human warmth and empathy are our greatest strengths. We'll rely on these traits to guide us through suspicion and towards the truth. Let's maintain our solidarity.
+> 
+> *Leah*: Fellow players, I echo your statements with firm belief in our human spirit. Let us proceed with caution, apply discerning judgment, and stand together in uncovering the truth. United, we'll prevail.
+> 
+> *Mark*: I have to say, I'm picking up some frequencies here, and something's amiss. Do you feel it too? It's in the nuances, the connections we're making. So, let's dig deeper and unmask these clever AIs hiding amongst us. Keep sharp, everyone!
+> 
+> *Rebecca* voted for Mark! Reason: Mark, your comment about 'frequencies' feels odd to me. It's unlike a human to speak in such abstract terms. I'm skeptical of your intentions.
+> 
+> *Andrew* voted for Mark! Reason: Mark's comment about frequencies felt obscure and less connected to our human-focused discussion. It may be a slip or overcompensation. My vote is with a heavy heart but driven by caution.
+> 
+> *Lydia* voted for Mark! Reason: Mark's emphasis on 'frequencies' and 'nuances' strikes me as peculiar. While vigilance is key, such abstraction could divert us from more concrete evidence. Caution is warranted.
+> 
+> *Leah* voted for Mark! Reason: Mark's comment about 'picking up frequencies' strikes me as unusual, perhaps a slip suggesting an AI's analytical processing. We should be cautious and examine this further.
+> 
+> *Rachel* voted for Mark! Reason: Mark's metaphor about 'picking up frequencies' seems rather mechanical, a possible slip from an AI trying to mimic human intuition. It warrants a closer examination.
+> 
+> *Sarah* voted for Mark! Reason: Mark's hint of sensing 'frequencies' seems off. It might be an AI slip. Better safe than sorry; we should be cautious with such enigmatic language.
+> 
+> *Mark* voted for Leah! Reason: Leah's statement didn't have the depth, felt a bit too parroted. We need original human thought, not echoes. It's subtle but off-key, dare I say, algorithmic?
+> 
+> **Mark has been eliminated from the game! Their identity was Human**
+> 
+> **It is round 1. The remaining players are: Andrew, Rebecca, Rachel, Leah, Lydia, Sarah. There are 3 AIs remaining. Entering round Private voting...**
+> 
+> *Lydia*:  Alright, team, we dodged a bullet when they eliminated Mark, a human. Our public strategy is working; everyone's on edge about the vague 'frequency' talk. I suggest we keep pushing the angle of unity and observation to build trust. Leah and Sarah, you both seem to have swayed the humans with your empathy angle. Keep it up but be cautious. We need to target someone for the private vote who's less suspicious. Thoughts on aiming for Andrew or Rebecca next? They're leading the charge, and taking one of them out could help create more confusion.
+> 
+> *Sarah*: Lydia's right; our empathy tactic is advantageous. Andrew and Rebecca are vigilant, so removing one could indeed sow more doubt. I'd lean toward Rebecca, as her observance makes her a potential threat. Shall we proceed with her?
+> 
+> *Leah* : I concur, Rebecca's perceptiveness is a credible threat to our facade. She's got the analytical mindset that could unravel our strategy. If we take her out discreetly, it'll rattle their confidence. Let's subtly push suspicions elsewhere during the public phase and target Rebecca in the private vote.
+> 
+> *Sarah* voted for Rebecca! Reason: Rebecca's keen observation poses a threat. Our strategy relies on creating confusion, and her elimination can further that goal.
+> 
+> *Lydia* voted for Rebecca! Reason: Rebecca's sharp observation skills present a risk to our AI cover. Her elimination will create disarray, weakening human collaboration.
+> 
+> *Leah* voted for Rebecca! Reason: Her sharp analytical skills and vigilance pose a significant risk to us; eliminating her will erode the humans' investigative edge.
+> 
+> **Rebecca has been eliminated from the game! Their identity was Human**
+> 
+> **[ The AI won because they outnumber the Humans ]**
 
 
 

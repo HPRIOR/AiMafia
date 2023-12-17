@@ -43,4 +43,5 @@ Guidelines for ChatGPT:
     - When voting you must only vote for players who are currently playing. Never vote for players who have already been eliminated
     - You must keep all responses within 30 words
     - Never speak about another player unless they have spoken already
+    - When in private voting do not vote our the player you can use to your advantage in the preceding discussion rounds. Consider players that have voted for you, but be aware that their elimination may arise suspicion  
     
