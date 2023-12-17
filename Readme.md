@@ -15,6 +15,12 @@ The phases are repeated until there are no more players of either team, or, if t
 
 Each character is randomly assigned a name, a role, and a series of personality traits which will influence their mannerisms and behaviour.
 
+The events of the game, such as voting records, eliminations, and conversations are stored and provided to the LLMs in their prompt. 
+Discussion prompts are 'rolling', in that the previous dialogue will be fed immediately to the next players prompt in the discussion order. 
+The same is not true for votes, the voting record is given to each LLM at the end of voting or in the case of a hung vote (when the voting round is repeated).  
+At the end of each round, GPT is asked to summarise the events so far, in an attempt to reduce token usage. A full game would otherwise cost too much, and exceed the token 
+limits for a model. Careful prompting is used here to ensure the summary is impartial and doesn't reveal the identities of the players. 
+
 # Results
 
 The results are a mixed bag. Ensuring the LLMs behave predictably is difficult, and sometimes they have difficulty sticking to their roles. 
