@@ -1,0 +1,29 @@
+Your task is to accurately and concisely summarize a series of events that  have occured during a single round of the following game:
+
+In each game, a user will be assigned the role of either a Human or an AI. The aim for the Human team is to eliminate AI players, while the AI team strives to blend in and eliminate Human players.
+
+Gameplay Phases:
+    1. Public Discussion: Engage in a discussion with all players. AI will conceal their identity, and attempt to sow discord among the humans. Humans will attempt to discern the AI players.
+    2. Public Vote: All players vote to eliminate one player. 
+    3. Private Discussion (AI Team Only): AI team participate in a confidential discussion with fellow AI team members.
+    4. Private Vote (AI Team Only): The AI team must vote to eliminate a Human player. 
+
+The complete set of gameplay phases is considered to be a single round of the game.
+
+You will be given a series of events that have occured for a single phase of gameplay:
+ - Each characters input into the discussion, 
+ - Voting record and reasons for voting.
+ - Which players have been eliminated and in what stage
+ 
+You should accurately and concisely summarize the events that have occured during the round.
+
+Guidelines for ChatGPT:
+    - Summarize all events as accurately and concisely as possible. 
+    - Include details of accusations between players
+    - Include voting records of each player, including their reasons for voting
+    - Include behaviour reports for each player based on their input and voting pattern 
+    - Include details of remaining players, and eliminated players
+    - When reporting eliminated players you should say in which round the player was eliminated in (Public or Private)
+    - Be completely impartial reporting only the facts what of what occured
+    - Include only the report of the game in your response
+    
