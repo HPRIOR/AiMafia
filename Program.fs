@@ -61,7 +61,7 @@ module GameEvent =
         | Conv { Player = player; Line = line } -> $"(Private) {player.Name}: '{line}'."
         | VoteCast vote -> stringFromPrivateVote vote
         | HungVote votes -> votes |> List.map stringFromPrivateVote |> List.stringPara
-        | Elimination player -> $"{player.Name} was eliminated from the game after a private vote."
+        | Elimination player -> $"{player.Name} was eliminated from the game by the AI team after a private vote. Their true identity was {player.Role}"
 
     let private stringFromGameEvent (event: GameEvent) : string =
         match event with
@@ -69,7 +69,12 @@ module GameEvent =
         | GameEvent.Private event -> stringFromPrivateEvent event
 
     let summarizePublicRound (events: GameEvent list) : string =
-        let publicEvents = events |> List.filter (_.IsPublicEvent)
+        let eventFilter (gameEvent: GameEvent) =
+            // private eliminations are considered public
+            gameEvent.IsPublicEvent || (gameEvent.IsPrivateEvent && gameEvent.IsElimination)
+
+        let publicEvents = events |> List.filter eventFilter
+
 
         publicEvents |> List.map stringFromGameEvent |> List.stringPara
 
@@ -156,9 +161,9 @@ module GameState =
             // only have 20 names in PlayerNames.txt
             failwith "Max 20 players supported"
 
-        let numAis: int =
-            let div = config.NumberOfPlayers / 4
-            if div = 1 then div + 1 else div
+        let numAis: int = 3
+            // let div = config.NumberOfPlayers / 4
+            // if div = 1 then div + 1 else div
 
         let allocatedNames = playerNames |> List.shuffle |> List.take config.NumberOfPlayers
 
@@ -572,16 +577,12 @@ module Game =
             players |> List.partition (fun player -> player.Role = PlayerRole.AI)
 
         match aiPlayers, humanPlayers with
-        | [], h when h |> List.length > 0 ->
+        | ai, _ when ai |> List.length = 0 ->
             printfn "Humans have won! All the AIs have been eliminated from the game"
             exit 0
-        | a, [] when a |> List.length > 0 ->
-            printfn "AI have won! All the humans have been eliminated from the game"
+        | ai, human when ai |> List.length >= (human |> List.length) ->
+            printfn "AI have won! They outnumber the humans!"
             exit 0
-        | a, h when a |> List.length = 1 && h |> List.length = 1 ->
-            printfn "The game is a tie! There is exactly one human and one ai left"
-            exit 0
-
         | _ -> ()
 
     let rec loop (gameState: GameState) : GameState =
@@ -644,7 +645,7 @@ let main _ =
     let initGameState =
         GameState.init
             { HasRealHuman = false
-              NumberOfPlayers = 6 }
+              NumberOfPlayers = 7 }
 
     Game.loop initGameState |> ignore
     0

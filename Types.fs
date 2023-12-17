@@ -46,7 +46,20 @@ type GameEvent =
         | GameEvent.Public _ -> true
         | _ -> false
 
-
+    member this.IsElimination =
+        match this with
+        | GameEvent.Public event ->
+            match event with
+            | Conv _
+            | VoteCast _
+            | HungVote _ -> false
+            | Elimination _ -> true
+        | GameEvent.Private event ->
+            match event with
+            | Conv _
+            | VoteCast _
+            | HungVote _ -> false
+            | Elimination _ -> true
 
 type RoundType =
     | PrivateVoting
@@ -73,12 +86,12 @@ type GameSummary =
         match this with
         | Private _ -> true
         | _ -> false
-        
+
     member this.Value =
-         match this with
-         | Public s 
-         | Private s -> s
-        
+        match this with
+        | Public s
+        | Private s -> s
+
 
 
 type GameState =
